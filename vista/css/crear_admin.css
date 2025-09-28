@@ -1,0 +1,85 @@
+body {
+    background: linear-gradient(45deg, #0a0c1a, #1c2541);
+    font-family: 'Orbitron', sans-serif;
+    color: #00ffff;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    perspective: 1000px;
+}
+
+.page.floating {
+    background: rgba(20, 30, 60, 0.8);
+    border: 2px solid #00ffff;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.3), 
+                inset 0 0 20px rgba(0, 255, 255, 0.2);
+    padding: 40px;
+    width: 400px;
+    transform: rotateX(10deg);
+    transition: all 0.3s ease;
+}
+
+.page.floating:hover {
+    transform: rotateX(0) scale(1.02);
+    box-shadow: 0 0 50px rgba(0, 255, 255, 0.5);
+}
+
+.input-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8em;
+}
+
+.input-group input, 
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    background: rgba(10, 20, 40, 0.7);
+    border: 1px solid #00ffff;
+    color: #00ffff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    outline: none;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #00ffff;
+    color: #0a0c1a;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: #7fffd4;
+    transform: scale(1.05);
+}
+
+.error-message {
+    color: #ff4444;
+    text-align: center;
+    margin-bottom: 20px;
+}
+    

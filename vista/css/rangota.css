@@ -1,0 +1,84 @@
+    
+        body {
+            background: linear-gradient(135deg, #000000, #1a0000, #330000);
+            background-attachment: fixed;
+        }
+        .red-glow {
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+        }
+        .hover-red-glow:hover {
+            box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
+        }
+        .rangos-table {
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 0, 0, 0.3);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+        }
+        .rangos-table th, .rangos-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 0, 0, 0.2);
+        }
+        .rangos-table th {
+            color: #ff0000;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: linear-gradient(135deg, rgba(255, 0, 0, 0.1), rgba(255, 0, 0, 0.05));
+        }
+        .rangos-table tr:hover {
+            background-color: rgba(255, 0, 0, 0.1);
+            cursor: pointer;
+            transform: scale(1.01);
+            transition: all 0.3s ease;
+        }
+        .rangos-table tbody tr {
+            transition: all 0.3s ease;
+        }
+        .back-button {
+            background: linear-gradient(135deg, #660000, #cc0000);
+            border: 1px solid rgba(255, 0, 0, 0.3);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2);
+            margin-bottom: 2rem;
+        }
+        .back-button:hover {
+            background: linear-gradient(135deg, #cc0000, #ff0000);
+            box-shadow: 0 6px 25px rgba(255, 0, 0, 0.4);
+            transform: translateY(-2px);
+            color: white;
+        }
+        .rango-icon {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ff0000, #cc0000);
+        }
+        .table-container {
+            overflow-x: auto;
+            border-radius: 1rem;
+        }
+        .page-title {
+            background: linear-gradient(135deg, #ff0000, #cc0000);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+        }
+    

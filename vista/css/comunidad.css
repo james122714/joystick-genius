@@ -1,0 +1,59 @@
+/* Animación de resplandor */
+@keyframes glowPulse {
+    0% {
+        box-shadow: 0 0 10px rgba(163, 0, 0, 0.6), 0 0 20px rgba(0, 102, 0, 0.4);
+        border-color: rgba(163, 0, 0, 0.6);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(0, 102, 0, 0.6), 0 0 40px rgba(163, 0, 0, 0.6);
+        border-color: rgba(0, 102, 0, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(163, 0, 0, 0.6), 0 0 20px rgba(0, 102, 0, 0.4);
+        border-color: rgba(163, 0, 0, 0.6);
+    }
+}
+/* body{
+    background: linear-gradient(135deg, #570000, #0d0d0d);
+} */
+
+/* Botones con resplandor */
+.join-btn {
+    background: linear-gradient(45deg, #a30000, #006600);
+    border: 2px solid rgba(163, 0, 0, 0.5);
+    padding: 1rem 2rem;
+    border-radius: 25px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    animation: glowPulse 3s infinite ease-in-out;
+}
+
+.join-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+}
+
+/* Tarjetas con efecto neón */
+.stat-card, 
+.platform-card, 
+.event-card, 
+.moderator-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    border: 2px solid rgba(0, 102, 0, 0.4);
+    transition: all 0.3s ease;
+    animation: glowPulse 4s infinite ease-in-out;
+}
+
+.stat-card:hover,
+.platform-card:hover,
+.event-card:hover,
+.moderator-card:hover {
+    transform: translateY(-5px) scale(1.05);
+}

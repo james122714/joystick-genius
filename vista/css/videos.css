@@ -1,0 +1,271 @@
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 2rem;
+            color: #1a1a1a;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(to right, #00b09b, #96c93d);
+            padding: 2rem;
+            color: white;
+            text-align: center;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .table-container {
+            padding: 2rem;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin-bottom: 1rem;
+        }
+
+        th {
+            background-color: #f8f9fa;
+            color: #2d3748;
+            font-weight: 600;
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 2px solid #e2e8f0;
+        }
+
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid #e2e8f0;
+            color: #4a5568;
+        }
+
+        tr:hover {
+            background-color: #f7fafc;
+        }
+
+        /* Estilo para la columna de acciones */
+        .actions {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        /* Botones de acción */
+        .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.875rem;
+        }
+
+        .btn-edit {
+            background-color: #3b82f6;
+            color: white;
+        }
+
+        .btn-edit:hover {
+            background-color: #2563eb;
+            transform: translateY(-1px);
+        }
+
+        .btn-delete {
+            background-color: #ef4444;
+            color: white;
+        }
+
+        .btn-delete:hover {
+            background-color: #dc2626;
+            transform: translateY(-1px);
+        }
+
+        .btn-view {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+
+        .btn-view:hover {
+            text-decoration: underline;
+        }
+
+        /* Badge para categorías */
+        .category-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-align: center;
+            display: inline-block;
+        }
+
+        .category-Fuerza {
+            background-color: #fee2e2;
+            color: #991b1b;
+        }
+
+        .category-Yoga {
+            background-color: #e0e7ff;
+            color: #3730a3;
+        }
+
+        .category-Pilates {
+            background-color: #fef3c7;
+            color: #92400e;
+        }
+
+        .category-Cardio {
+            background-color: #dcfce7;
+            color: #166534;
+        }
+
+        /* Footer con link de regreso */
+        .footer {
+            padding: 2rem;
+            text-align: center;
+            background-color: #f8f9fa;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .back-link {
+            color: #4a5568;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #2d3748;
+        }
+
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            .container {
+                border-radius: 16px;
+            }
+
+            .header {
+                padding: 1.5rem;
+            }
+
+            .table-container {
+                padding: 1rem;
+            }
+
+            td, th {
+                padding: 0.75rem;
+            }
+
+            .actions {
+                flex-direction: column;
+                gap: 0.25rem;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        /* Mensaje cuando no hay videos */
+        .no-videos {
+            text-align: center;
+            padding: 3rem;
+            color: #64748b;
+            font-size: 1.1rem;
+        }
+
+      /* Estilos para los botones de filtro */
+      .filter-container {
+            padding: 2rem;
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .filter-btn.active {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .filter-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .filter-btn.all {
+            background-color: #64748b;
+            color: white;
+        }
+
+        .filter-btn.Fuerza {
+            background-color: #fee2e2;
+            color: #991b1b;
+        }
+
+        .filter-btn.Yoga {
+            background-color: #e0e7ff;
+            color: #3730a3;
+        }
+
+        .filter-btn.Pilates {
+            background-color: #fef3c7;
+            color: #92400e;
+        }
+
+        .filter-btn.Cardio {
+            background-color: #dcfce7;
+            color: #166534;
+        }
+
+        /* Animación para los elementos de la tabla */
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }

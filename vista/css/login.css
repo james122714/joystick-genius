@@ -1,0 +1,230 @@
+:root {
+  --bg-primary: #1a0000;
+  --bg-secondary: #000000;
+  --text-primary: #ffffff;
+  --text-secondary: #ffffff;
+  --accent-color: #006400;
+  --error-color: #8B0000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+.login-container {
+  background: rgba(20, 0, 0, 0.8);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+  padding: 40px;
+  width: 100%;
+  max-width: 450px;
+  transform-style: preserve-3d;
+  transform: rotateX(10deg) rotateY(-10deg);
+  transition: all 0.5s ease;
+}
+
+.login-container:hover {
+  transform: rotateX(0) rotateY(0);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.5);
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo img {
+  max-width: 120px;
+  filter: drop-shadow(0 0 10px rgba(0,100,0,0.5));
+}
+
+.input-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-secondary);
+  font-size: 0.9em;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 15px;
+  background: rgba(20,0,0,0.7);
+  border: 1px solid rgba(0,100,0,0.3);
+  border-radius: 8px;
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 15px rgba(0,100,0,0.3);
+}
+
+.password-container {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  color: var(--text-primary);
+}
+
+.toggle-password:hover {
+  opacity: 1;
+}
+
+.btn-login {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--accent-color);
+  color: var(--text-primary);
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+}
+
+.btn-login:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  font-size: 0.9em;
+}
+
+.links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: var(--accent-color);
+}
+
+.error-message {
+  background-color: rgba(139,0,0,0.1);
+  border: 1px solid var(--error-color);
+  color: var(--error-color);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.error-icon {
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+.terms-conditions {
+  margin-top: 15px;
+  font-size: 0.8em;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+}
+
+.terms-conditions input {
+  margin-right: 10px;
+}
+
+.terms-conditions a {
+  color: var(--accent-color);
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.back-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-back {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.btn-back:hover {
+  color: var(--accent-color);
+}
+
+/* Términos y Condiciones Modal */
+#terms-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.terms-modal-content {
+  background-color: var(--bg-secondary);
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+  color: var(--text-primary);
+}
+
+.terms-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: var(--text-secondary);
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.terms-modal-close:hover {
+  color: var(--accent-color);
+}

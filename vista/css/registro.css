@@ -1,0 +1,316 @@
+/* Reset y variables globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+:root {
+    --cyber-pink: #ff2a6d;
+    --cyber-blue: #01c8ee;
+    --dark-bg: #0a0a1f;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+}
+
+body {
+    background: radial-gradient(circle at center, #1a1a3a, var(--dark-bg));
+    min-height: 100vh;
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Página de registro */
+.page {
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid var(--cyber-pink);
+    border-radius: 20px;
+    padding: 3rem;
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.page::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        rgba(255, 42, 109, 0.1),
+        transparent
+    );
+    transform: rotate(45deg);
+    animation: lightSweep 3s linear infinite;
+    pointer-events: none;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: var(--cyber-pink);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 15px rgba(255, 42, 109, 0.5);
+}
+
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.input-group {
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+input {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--cyber-pink);
+    border-radius: 8px;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--cyber-blue);
+    box-shadow: 0 0 20px rgba(1, 200, 238, 0.3);
+}
+
+/* Botón de registro */
+button {
+    background: var(--cyber-pink);
+    color: var(--text-primary);
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+button:hover::before {
+    transform: translateX(100%);
+}
+
+button:hover {
+    background: #ff1a5e;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 42, 109, 0.4);
+}
+
+/* Agregar estos estilos a registro.css */
+.back-button {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--cyber-pink);
+}
+
+.btn-back:hover {
+    color: var(--cyber-pink);
+    transform: translateX(-5px);
+    box-shadow: 0 0 15px rgba(255, 42, 109, 0.3);
+}
+
+.back-icon {
+    font-size: 1.2rem;
+}
+
+/* Agregar estos estilos a nosotros.css */
+.back-button {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--neon-blue);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--neon-blue);
+}
+
+.btn-back:hover {
+    background: rgba(0, 243, 255, 0.1);
+    transform: translateX(-5px);
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.3);
+}
+
+/* Agregar estos estilos a servicios.css */
+.back-button {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--cyber-yellow);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 1px solid var(--cyber-yellow);
+}
+
+.btn-back:hover {
+    background: rgba(240, 219, 79, 0.1);
+    transform: translateX(-5px);
+    box-shadow: 0 0 15px rgba(240, 219, 79, 0.3);
+}
+
+/* Enlaces */
+.login-link {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.login-link a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.login-link a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--cyber-blue);
+    transition: width 0.3s ease;
+}
+
+.login-link a:hover {
+    color: var(--cyber-blue);
+}
+
+.login-link a:hover::after {
+    width: 100%;
+}
+
+/* Mensajes de error */
+.error-message {
+    background: rgba(255, 0, 0, 0.1);
+    border: 1px solid #ff4444;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    color: #ff4444;
+    text-align: center;
+}
+
+/* Animaciones */
+@keyframes lightSweep {
+    0% {
+        transform: rotate(45deg) translateX(-100%);
+    }
+    100% {
+        transform: rotate(45deg) translateX(100%);
+    }
+}
+
+.floating {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    .page {
+        padding: 2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page {
+        padding: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    input {
+        padding: 0.8rem;
+    }
+}

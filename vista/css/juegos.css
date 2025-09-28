@@ -1,0 +1,30 @@
+body {
+            background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
+            font-family: 'Inter', sans-serif;
+            background-attachment: fixed;
+        }
+        .game-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2);
+        }
+        .loading-card {
+            background: linear-gradient(90deg, #2c2c2c 25%, #3c3c3c 50%, #2c2c2c 75%);
+            background-size: 200% 100%;
+            animation: shimmer 2s infinite;
+        }
+        @keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        .category-button, .nav-button {
+            transition: all 0.3s ease;
+        }
+        .category-button:hover, .nav-button:hover {
+            transform: scale(1.05);
+        }
+        .share-button:hover svg, .favorite-button:hover svg, .like-button:hover svg {
+            transform: scale(1.1);
+        }

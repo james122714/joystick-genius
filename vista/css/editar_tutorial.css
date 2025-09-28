@@ -1,0 +1,152 @@
+body {
+    background: linear-gradient(45deg, #0a0c1a, #1c2541);
+    font-family: 'Orbitron', sans-serif;
+    color: #00ffff;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    perspective: 1000px;
+}
+
+.page.floating {
+    background: rgba(20, 30, 60, 0.8);
+    border: 2px solid #00ffff;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.3), 
+                inset 0 0 20px rgba(0, 255, 255, 0.2);
+    padding: 40px;
+    width: 500px;
+    transform: rotateX(10deg);
+    transition: all 0.3s ease;
+}
+
+.page.floating:hover {
+    transform: rotateX(0) scale(1.02);
+    box-shadow: 0 0 50px rgba(0, 255, 255, 0.5);
+}
+
+h2 {
+    text-align: center;
+    color: #00ffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.input-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.8em;
+    color: #00ffff;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    background: rgba(10, 20, 40, 0.7);
+    border: 1px solid #00ffff;
+    color: #00ffff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.input-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    outline: none;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.submit-button, .cancel-button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+}
+
+.submit-button {
+    background: #00ffff;
+    color: #0a0c1a;
+}
+
+.cancel-button {
+    background: #ff4444;
+    color: white;
+}
+
+.submit-button:hover {
+    background: #7fffd4;
+    transform: scale(1.05);
+}
+
+.cancel-button:hover {
+    background: #ff6666;
+    transform: scale(1.05);
+}
+
+.error-message {
+    color: #ff4444;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 68, 68, 0.5);
+}
+
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300ffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 1em;
+    padding-right: 40px;
+}
+
+.back-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-link a {
+    color: #00ffff;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+}
+
+.back-link a:hover {
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+}

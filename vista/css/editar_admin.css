@@ -1,0 +1,104 @@
+body {
+    font-family: 'Roboto Mono', monospace;
+    color: #a50000; /* rojo predominante */
+    background: linear-gradient(-45deg, #0d0d0d, #220000, #004000, #111111);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.page.floating {
+    background: rgba(20, 20, 30, 0.9);
+    border: 2px solid #7a0000;
+    border-radius: 12px;
+    box-shadow: 0 0 50px rgba(165, 0, 0, 0.4), 
+                inset 0 0 25px rgba(0, 40, 0, 0.3);
+    padding: 40px;
+    width: 420px;
+    backdrop-filter: blur(12px);
+    position: relative;
+    overflow: hidden;
+}
+
+/* efecto holográfico */
+.page.floating.editar::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: repeating-linear-gradient(
+        transparent 0,
+        rgba(165, 0, 0, 0.08) 5px,
+        transparent 10px
+    );
+    animation: holographicEffect 6s linear infinite;
+}
+
+@keyframes holographicEffect {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.input-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #c10000;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.input-group input, 
+.input-group select {
+    width: 100%;
+    padding: 12px;
+    background: rgba(26, 26, 46, 0.8);
+    border: 1px solid #003d00;
+    color: #ffffff;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    outline: none;
+    box-shadow: 0 0 22px rgba(165, 0, 0, 0.6);
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #8b0000 0%, #111111 50%, #004d00 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #a30000 0%, #000000 50%, #006600 100%);
+    transform: scale(1.07);
+    box-shadow: 0 0 30px rgba(165, 0, 0, 0.6);
+}

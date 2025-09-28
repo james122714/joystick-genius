@@ -1,0 +1,172 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+}
+
+/* Mensaje de feedback */
+.mensaje {
+    background: rgba(0, 255, 0, 0.1);
+    border-left: 4px solid #00ff00;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* Header del perfil */
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.profile-pic img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 3px solid #4a90e2;
+}
+
+.profile-title h1 {
+    margin: 0;
+    color: #4a90e2;
+}
+
+/* Secciones */
+.section {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    color: #4a90e2;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgba(74, 144, 226, 0.3);
+    padding-bottom: 10px;
+}
+
+/* Formularios */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ccc;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+}
+
+/* Botones */
+.btn {
+    background: linear-gradient(to right, #4a90e2, #357abd);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #357abd, #2c6aa0);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: linear-gradient(to right, #6c757d, #495057);
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Estado de la cuenta */
+.info-group {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.info-group:last-child {
+    border-bottom: none;
+}
+
+/* Beneficios VIP */
+.beneficios-list {
+    display: grid;
+    gap: 15px;
+}
+
+.beneficio-item {
+    background: rgba(74, 144, 226, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.beneficio-tipo {
+    font-weight: bold;
+    color: #4a90e2;
+}
+
+.beneficio-fecha {
+    color: #ccc;
+    font-size: 0.9em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile-pic img {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .beneficio-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}

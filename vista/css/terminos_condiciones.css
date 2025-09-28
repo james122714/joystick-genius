@@ -1,0 +1,23 @@
+body {
+            background: linear-gradient(135deg, #111827, #1f2937);
+            color: #e0e6ff;
+            font-family: 'Inter', sans-serif;
+        }
+        .glass-card {
+            background: rgba(31, 41, 55, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.125);
+            padding: 2rem;
+        }
+        .section-title {
+            background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+            color: transparent;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            margin-left: 1.5rem;
+            list-style-type: disc;
+        }

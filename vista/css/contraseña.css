@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+  
+body {
+    background: url(../multimedia/imagenes/WhatsApp\ Image\ 2024-09-17\ at\ 11.59.06\ AM\ \(1\).jpeg);
+}
+
+.for-container {
+    width: 400px; 
+    height: 500px; 
+    border: 1px solid #e0cece; 
+    padding: 30px; 
+    box-shadow: 10px 0px 40px rgba(255, 0, 0, 0.74); 
+    background-color: #0c0c0c; 
+    margin: 70px auto;
+    border-radius: 10px; 
+}
+
+.for-container h1 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: #fdfdfd;
+}
+
+.for-container p{
+    text-align: center;
+    font-size: 17px;
+    margin: 16px 0;
+}
+
+.controls{
+    width: 100%;
+    background: #d7d7d7;
+    padding-left: center;
+    border-radius: 10px;
+    margin-bottom: 16%;
+    border: 1px solid #1f53c5;
+    font-family: 'Calibri';
+    font-size: 19px;
+}
+
+  
+.for-container .button {
+    text-align: center;
+    width: 100%;
+    background: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 6px 0;
+    font-size: 16px;
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+#miBoton:hover {
+    background-color: #5512f0; /* Color al pasar el cursor sobre el botón */
+}
+
+
+
+
+
+

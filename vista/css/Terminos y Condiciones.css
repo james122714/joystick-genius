@@ -1,0 +1,33 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background: linear-gradient(to right, #10df21, #1095e2);
+  margin-top: 30px; 
+}
+
+.for-container{
+  width: auto;
+  height: 70px;
+  color: white;
+}
+
+.for-container h4 {
+  font-size: 40px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.for-container p {
+  font-size: 25px;
+  margin: 30px;
+}
+
+.texto {
+  margin-bottom: 40px; 
+  padding-bottom: 30px; 
+}

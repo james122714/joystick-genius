@@ -1,0 +1,13 @@
+body {
+            background: linear-gradient(135deg, #000000, #1a0000, #330000);
+            background-attachment: fixed;
+        }
+        .red-glow {
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+        }
+        .hover-red-glow:hover {
+            box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
+        }
+        .difficulty-beginner { border-color: rgba(255, 204, 0, 0.3); } /* Amarillo suave para principiante */
+        .difficulty-intermediate { border-color: rgba(255, 102, 0, 0.3); } /* Naranja para intermedio */
+        .difficulty-advanced { border-color: rgba(255, 0, 0, 0.3); } /* Rojo para avanzado */
